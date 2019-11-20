@@ -10,7 +10,8 @@ search.addEventListener('click',function(e){
     xhr.onload = function(){
         if(this.status == 200){
             var info = JSON.parse(this.response);
-            console.log(info.code);
+            console.log(info);
+            document.getElementById('result').innerHTML = "<p>"+info.name+"</p>";
             // console.log(this.response)
         }
     }
