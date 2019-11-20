@@ -9,8 +9,9 @@ search.addEventListener('click',function(e){
     xhr.open('GET','world.php?q='+country,true);
     xhr.onload = function(){
         if(this.status == 200){
-            var info = JSON.parse(this.result);
-            
+            var info = JSON.parse(this.response);
+            console.log(info.code);
+            // console.log(this.response)
         }
     }
     xhr.send();
